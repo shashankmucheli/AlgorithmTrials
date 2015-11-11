@@ -1,4 +1,4 @@
-package algorithmtrials;
+package HackerRank;
 
 import static java.lang.System.exit;
 import java.util.*;
