@@ -15,12 +15,12 @@ import java.util.Scanner;
  */
 public class ExtraLongFactorials {
     public static void main(String args[]){
-        int n;
+        BigInteger n;
         Scanner in = new Scanner(System.in);
-        n = in.nextInt();
+        n = in.nextBigInteger();
         BigInteger fact;
-        for(int i = n; i>=0;i++){
+        /*for(int i = n; i>=0;i++){
             //if(i == 0) fact*= BigInteger.valueOf(myInteger.intValue(1));
-        }
+        }*/
     }
 }

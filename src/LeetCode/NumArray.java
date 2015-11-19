@@ -17,9 +17,13 @@ import java.util.Scanner;
  */
 public class NumArray {
 
-   private int[] nums = new int[6];
+   private final int[] nums = new int[6];
     public NumArray(int[] nums) {
-        this.nums = new int[]{-2, 0, 3, -5, 2, -1};
+        //System.out.println("Constructor");
+        Scanner in = new Scanner(System.in);
+        for (int i = 0; i< 6 ;i++){
+            this.nums[i] = in.nextInt();
+        }
     }
 
     public int sumRange(int i, int j) {
@@ -30,7 +34,7 @@ public class NumArray {
         return sum;
     }
     public static void main(String args[]){
-        int[] nums = new int[] {-2, 0, 3, -5, 2, -1};
+        int[] nums = new int[6];
         NumArray numarray = new NumArray(nums);
         Scanner in = new Scanner(System.in);
         int i = in.nextInt();
