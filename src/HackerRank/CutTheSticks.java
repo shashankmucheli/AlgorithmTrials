@@ -31,20 +31,22 @@ public class CutTheSticks {
         Scanner in = new Scanner(System.in);
         n = in.nextInt();
         int[] a = new int[n];
-        //ArrayList<Integer> a = new ArrayList<Integer>(10);
         if ( n > 1000 || n < 1) { exit(0);}
         for (int i = 0 ; i < n ; i++){
             a[i] = in.nextInt();
         }
         System.out.println("Pass");
         while(n > 0){
+            System.out.print("\n");
             int min = a[0];
-            for (int i = 1; i<n ; i++){
+            for (int i = 0; i<n ; i++){
                 if (min > a[i]) min = a[i];
             }
             //System.out.println(min);
             for(int i = 0; i < n ; i++){
                 a[i] = a[i] - min;
+            }
+            for(int i = 0; i < n ; i++){
                 if ( a[i] <= 0) {
                     for(int j = i ; j < n-1 ; j++){
                         a[j] = a[j+1];
@@ -52,9 +54,9 @@ public class CutTheSticks {
                     n--;
                 }
             }
-        }
-        for (int t: a){
-            System.out.println(t);
+            for (int i = 0; i < n ; i++){
+                System.out.print(a[i]+" ");
+            }
         }
         //System.out.println(a.indexOf(5));
     }
