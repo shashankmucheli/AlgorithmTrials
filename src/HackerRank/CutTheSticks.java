@@ -27,9 +27,9 @@ public class CutTheSticks {
         System.out.println(a.size());
         while(a.size() > 1){
             int min = Integer.MAX_VALUE;
-            for(int i = 0 ; i < a.size() ; i++){
-                if(a.get(i) <= min){
-                    min = a.get(i);
+            for (Integer a1 : a) {
+                if (a1 <= min) {
+                    min = a1;
                 }
             }
             for(int i = 0 ; i < a.size() ; i++){
@@ -38,7 +38,7 @@ public class CutTheSticks {
                 if(tmp <= 0) { a.remove(i); i--;}
                 else a.set(i, tmp);
             }
-            if(a.size() != 0){
+            if(!a.isEmpty()){
                 System.out.println(a.size());
             }            
         }
