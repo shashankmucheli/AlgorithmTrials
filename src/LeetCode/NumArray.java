@@ -1,46 +1,33 @@
 /*
- * Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.
- * @param i,j
- * @return int:sum
- * Note: 
- *
- *  1. You may assume that the array does not change.
- *  2. There are many calls to sumRange function.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package LeetCode;
 
-import static java.lang.System.exit;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
- * @author Shashank Mucheli shashank@mucheli.com
+ *
+ * @author Shashank
  */
 public class NumArray {
-
-   private final int[] nums = new int[6];
     public NumArray(int[] nums) {
-        //System.out.println("Constructor");
-        Scanner in = new Scanner(System.in);
-        for (int i = 0; i< 6 ;i++){
-            this.nums[i] = in.nextInt();
-        }
+        ArrayList<Integer> list = new ArrayList(Arrays.asList(nums));
     }
 
-    public int sumRange(int i, int j) {
-        int sum = 0;
-        for(int k=i ; k <= j; k++){
-            sum += nums[k];
-        }
-        return sum;
+    public static  int sumRange(int i, int j) {
+        //ArrayList<Integer> sublist = ;
+        //this.
+        return 0;
+        
     }
     public static void main(String args[]){
-        int[] nums = new int[6];
-        NumArray numarray = new NumArray(nums);
-        Scanner in = new Scanner(System.in);
-        int i = in.nextInt();
-        int j = in.nextInt();
-        if (i > j){System.out.println("i greater than j"); exit(0);}
-        int b = numarray.sumRange(i, j);
-        System.out.println(b);
+        int[] nums = new int[10];
+        for (int i = 0; i < 10; i++){
+            nums[i] = i;
+        }
+        NumArray numArray = new NumArray(nums); 
     }
 }
